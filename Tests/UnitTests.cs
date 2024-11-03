@@ -39,21 +39,21 @@ namespace GithubActionsLab
         //    Assert.AreEqual(64, Porgram.Power("8", "2"));
         //}
 
-        //[Test]
-        //public void Power_Invalid_Ward()
-        //{
-        //    // this test is initially designed to fail
-        //    Assert.Throws<FormatException>(() => Program.Power("1", "a"));
-        //    Assert.Throws<FormatException>(() => Program.Power("a", "1"));
-        //    Assert.Throws<FormatException>(() => Program.Power("a", "a"));
-        //}
+        [Test]
+        public void Power_Invalid_Ward()
+        {
+            // this test is initially designed to fail
+            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "a"));
+        }
 
-        //[Test]
-        //public void Power_Null_Ward()
-        //{
-        //    Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
-        //    Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
-        //    Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
-        //}
+        [Test]
+        public void Power_Null_Ward()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+        }
     }
 }
