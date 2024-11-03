@@ -30,6 +30,30 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // Implement 3 tests per operation, following a similar pattern as above
+       // Implement 3 tests per operation, following a similar pattern as above
+       [Test]
+        public void Power_Valid_Ward()
+        {
+            Assert.AreEqual(27, Program.Power("3", "3"));
+            Assert.AreEqual(32, Program.Power("2", "5"));
+            Assert.AreEqual(64, Program.Power("8", "2"));
+        }
+
+        [Test]
+        public void Power_Invalid_Ward()
+        {
+            // this test is initially designed to fail
+            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "a"));
+        }
+
+        [Test]
+        public void Power_Null_Ward()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+        }
     }
 }
