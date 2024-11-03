@@ -34,7 +34,7 @@ namespace GithubActionsLab
         [Test]
         public void Power_Valid_Ward()
         {
-            Assert.AreEqual(9, Porgram.Power("3", "3"));
+            Assert.AreEqual(27, Porgram.Power("3", "3"));
             Assert.AreEqual(32, Porgram.Power("2", "5"));
             Assert.AreEqual(64, Porgram.Power("8", "2"));
         }
