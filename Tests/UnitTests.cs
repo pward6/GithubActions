@@ -43,7 +43,7 @@ namespace GithubActionsLab
         public void Power_Invalid_Ward()
         {
             // this test is initially designed to fail
-            Assert.Throws<FormatException>(() => Program.Power("1", "2"));
+            Assert.Throws<FormatException>(() => Program.Power("1", "L"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
             Assert.Throws<FormatException>(() => Program.Power("a", "a"));
         }
